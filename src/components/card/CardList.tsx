@@ -6,24 +6,12 @@ import List from '../../data/list'
 const CardList = () => {
   const [currentCard, setCurrentCard] = useState(0)
 
-  const shuffleArray = (array:object[]) => {
-    let i = array.length - 1;
-    for (; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-    console.log(array)
-    return array;
-  }
-
   useEffect(() => {
-    shuffleArray(List)
     setCurrentCard(0)
   },[])
 
   const nextCard = () => {
+    
     console.log(currentCard)
 
     if (currentCard >= List.length - 1) {

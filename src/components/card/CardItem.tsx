@@ -10,7 +10,7 @@ const Card = (props:any) => {
   return(
     <div>
 
-      <section onClick={() => flipCard()}>
+      <div onClick={() => flipCard()}>
         { !flip && 
           <article className="card">
             <header className="card-header">
@@ -26,7 +26,7 @@ const Card = (props:any) => {
             </header>
           </article>
         }      
-      </section>
+      </div >
 
     </div>
 
