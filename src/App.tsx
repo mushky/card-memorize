@@ -15,11 +15,10 @@ function App() {
     <div className="App">
       <Navbar>
         <NavItem icon={<HamburgerIcon />}>
-
           <DropdownMenu />
-
         </NavItem>
       </Navbar>
+      
       <CardList />
 
     </div>

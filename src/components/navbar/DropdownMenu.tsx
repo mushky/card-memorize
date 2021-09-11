@@ -18,6 +18,7 @@ const DropdownMenu = () => {
     <div className="dropdown">
       <DropdownItem>Profile</DropdownItem>
       <DropdownItem>Add New Card Deck</DropdownItem>
+      <DropdownItem>View Decks</DropdownItem>
       <DropdownItem
         leftIcon={<SettingsIcon />}
         rightIcon={<ChevronIcon />}

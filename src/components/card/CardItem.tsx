@@ -7,14 +7,18 @@ const Card = (props:any) => {
     setFlip(!flip)
   }
 
+  const nextCardAndFlip = () => {
+    props.nextCard();
+    setFlip(false);
+  }
+
   return(
     <div>
-
-      <div onClick={() => flipCard()}>
+      <section>
         { !flip && 
-          <article className="card">
+          <article className="card" onClick={() => flipCard()}>
             <header className="card-header">
-              <h2>{props.front}</h2>
+              <h1>{props.front}</h1>
             </header>
           </article>      
         }
@@ -22,11 +26,21 @@ const Card = (props:any) => {
         { flip && 
           <article className="card">
             <header className="card-header">
-              <h2>{props.back}</h2>
+              <h1>{props.back}</h1>
             </header>
           </article>
-        }      
-      </div >
+        }
+
+        { flip && 
+          <div className="confidenceButtons">
+            <button className="confidence" onClick={() => nextCardAndFlip()}>0</button>
+            <button className="confidence" onClick={() => nextCardAndFlip()}>1</button>
+            <button className="confidence" onClick={() => nextCardAndFlip()}>2</button>
+            <button className="confidence" onClick={() => nextCardAndFlip()}>3</button>
+            <button className="confidence" onClick={() => nextCardAndFlip()}>4</button>
+          </div>
+        }    
+      </section >
 
     </div>
 
