@@ -1,30 +1,7 @@
 import {useState, useEffect} from 'react'
 
 import CardItem from './CardItem'
-import List from '../../list'
-
-// const list = [
-//   {
-//     id: 0,
-//     front: 'بالتاكيد',
-//     back: 'For sure/Definetly',
-//   },
-//   {
-//     id: 1,
-//     front: 'مصدر / مصادر (p)',
-//     back: 'Source',
-//   },
-//   {
-//     id: 2,
-//     front: 'لاحظت',
-//     back: 'Noticed',
-//   },
-//   {
-//     id: 3,
-//     front: 'زلزالٌ قوي يضرب #هايتي، ويسفر عن سقوطِ مئات الضحايا في جنوب غرب الجزيرة، بحسب وكالة "فرانس 24" والرئيس الأميركي جو #بايدن يعرض المساعدة.',
-//     back: 'A strong earthquake strikes Haiti, resulting in hundreds of casualties in the south west of the island, according to France 24, and US President Joe Biden offers help.'
-//   }
-// ];
+import List from '../../data/list'
 
 const CardList = () => {
   const [currentCard, setCurrentCard] = useState(0)
@@ -47,21 +24,27 @@ const CardList = () => {
   },[])
 
   const nextCard = () => {
-    if (currentCard < List.length -1) 
-      setCurrentCard(currentCard + 1)
-  }
+    console.log(currentCard)
 
-  const previousCard = () => {
-    if (currentCard > 0) 
-      setCurrentCard(currentCard - 1)
+    if (currentCard >= List.length - 1) {
+      setCurrentCard(0)
+    }
+
+    if (currentCard < List.length - 1) 
+      setCurrentCard(currentCard + 1)
   }
 
   return(
     <div>
       <CardItem front={List[currentCard].front} back={List[currentCard].back}/>
     
-      <button className="previousButton" onClick={() => previousCard()}>Previous</button>
-      <button className="nextButton" onClick={() => nextCard()}>Next</button>
+      <div className="confidenceButtons">
+        <button className="confidence" onClick={() => nextCard()}>0</button>
+        <button className="confidence" onClick={() => nextCard()}>1</button>
+        <button className="confidence" onClick={() => nextCard()}>2</button>
+        <button className="confidence" onClick={() => nextCard()}>3</button>
+        <button className="confidence" onClick={() => nextCard()}>4</button>
+      </div>
 
     </div>
 
