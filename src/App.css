@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #171410;
+  color: white;
+  font-family: 'DM Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  box-shadow: rgb(0, 0, 0) -1rem 0px 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgb(23, 20, 29);
+  transition: all 0.2s ease 0s;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;                        
+  transform: translate(0, 50%);
 }
 
-.App-link {
-  color: #61dafb;
+.previousButton {
+  float: left;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nextButton {
+  float: right;
+  margin-right: 10px;
+  padding-right: 10px;
 }
