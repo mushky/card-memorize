@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 
 const Card = (props:any) => {
   const [flip, setFlip] = useState(false)
@@ -11,7 +11,7 @@ const Card = (props:any) => {
     props.nextCard();
     setFlip(false);
   }
-
+  
   return(
     <div>
       <section>
@@ -22,7 +22,6 @@ const Card = (props:any) => {
             </header>
           </article>      
         }
-
         { flip && 
           <article className="card">
             <header className="card-header">

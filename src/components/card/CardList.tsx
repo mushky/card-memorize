@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, { useState } from 'react'
 
 import CardItem from './CardItem'
 import List from '../../data/list'
