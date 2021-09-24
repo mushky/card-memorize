@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 
 const Card = (props:any) => {
   const [flip, setFlip] = useState(false)

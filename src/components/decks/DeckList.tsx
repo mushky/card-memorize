@@ -5,10 +5,8 @@ import OurFamilyLifeBeCarefulSanad from '../../data/our-family-life-be-careful-s
 import ICard from '../../Models/ICard'
 
 const DeckList = () => {
-  //const [decks, setDecks] = useState([])
   
   useEffect(() => {
-    //setDecks([])
     console.log(BasicList)
     console.log(OurFamilyLifeBeCarefulSanad)
   },[])
@@ -18,7 +16,7 @@ const DeckList = () => {
       <div>
         <p>{BasicList[0].front}</p>
         {BasicList.map((card:ICard, index) => {
-          <div key={card.id}>
+          <div key={card.id}>s
             <p>{card.id}</p>
             <p>{card.front}</p>
             <p>{card.back}</p>
