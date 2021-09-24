@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 import CardItem from './CardItem'
-import List from '../../data/list'
+//import List from '../../data/list'
+import List from '../../data/our-family-life-be-careful-sanad'
 
 const CardList = () => {
   const [currentCard, setCurrentCard] = useState(0)

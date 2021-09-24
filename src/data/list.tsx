@@ -1,4 +1,6 @@
-const List = [
+import Card from '../Models/ICard'
+
+const BasicList:Card[] = [
   {
     id: 0,
     front: 'بالتاكيد',
@@ -73,7 +75,22 @@ const List = [
     id: 14,
     front: 'أتمنى',
     back: 'I wish',
+  },
+  {
+    id: 15,
+    front: "احزري",
+    back: 'Guess'
+  },
+  {
+    id: 16, 
+    front: "بيخوت",
+    back: "he mocked"
+  },
+  {
+    id: 17,
+    front: "بيخوت بصوت",
+    back: "mocked me out loud"
   }
 ];
 
-export default List;
+export default BasicList;

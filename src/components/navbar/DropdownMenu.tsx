@@ -4,7 +4,6 @@ import {ReactComponent as ChevronIcon} from '../../icons/chevron.svg';
 import {ReactComponent as SettingsIcon} from '../../icons/settings.svg';
 
 const DropdownMenu = () => {
-
   const DropdownItem = (props:any) => {
     return(
       <a href="#" className="menu-item">
