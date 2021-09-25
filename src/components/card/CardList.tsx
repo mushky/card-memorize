@@ -9,7 +9,10 @@ const CardList = () => {
   const [currentCard, setCurrentCard] = useState(0)
   const [selectedDeck, setSelectedDeck] = useState(BasicList)
 
-  const Items = [BasicList, BeCarefulSanad]
+  const Decks = [
+    BasicList, 
+    BeCarefulSanad
+  ]
   
   const nextCard = () => {
     if (currentCard >= selectedDeck.length - 1) {
@@ -22,7 +25,7 @@ const CardList = () => {
 
   const selectChange = (event:any) => {
     const value = event.target.value
-    setSelectedDeck(Items[value])
+    setSelectedDeck(Decks[value])
     setCurrentCard(0)
   }
 
@@ -30,8 +33,8 @@ const CardList = () => {
     <div>
       <form>
       <select onChange={selectChange}>
-        <option value="0">{Items[0][0].front}</option>
-        <option value="1">{Items[1][0].front}</option>
+        <option value="0">{Decks[0][0].front}</option>
+        <option value="1">{Decks[1][0].front}</option>
       </select> 
       </form>
       <CardItem front={selectedDeck[currentCard].front} back={selectedDeck[currentCard].back} nextCard={nextCard}/>
