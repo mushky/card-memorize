@@ -12,12 +12,12 @@ const Card = (props:any) => {
     setFlip(false);
   }
   
-  return(
+  return( 
     <div>
       <section>
         { !flip && 
           <article className="card" onClick={() => flipCard()}>
-            <header className="card-header">
+            <header className="cards-header">
               <h1>{props.front}</h1>
             </header>
           </article>      

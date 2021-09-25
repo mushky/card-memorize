@@ -1,6 +1,11 @@
 import Card from '../Models/ICard'
 
-const OurFamilyLifeBeCarefulSanad: Card[] = [
+const OurFamilyLifeBeCarefulSanad = [
+  {
+    id: 1000,
+    front: "Our Family Life - Be Careful Sanad",
+    back: ""
+  },
   {
     id: 1,
     front: "احزري",

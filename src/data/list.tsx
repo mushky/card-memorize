@@ -1,6 +1,11 @@
-import Card from '../Models/ICard'
+import ICard from '../Models/ICard'
 
-const BasicList:Card[] = [
+const BasicList = [
+  {
+    id: 1000,
+    front: "Basic List",
+    back: ""
+  },
   {
     id: 0,
     front: 'بالتاكيد',

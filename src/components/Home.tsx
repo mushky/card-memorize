@@ -1,12 +1,15 @@
+import { useState, useEffect } from 'react';
 import CardList from '../components/card/CardList'
 
-const Home = () => {
+const axios = require('axios')
 
+const Home = () => {
   return (
     <div className="App">
-  
+
       <CardList />
-  
+
+
     </div>
   );
 
