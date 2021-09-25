@@ -2,9 +2,9 @@ import Card from '../Models/ICard'
 
 const OurFamilyLifeBeCarefulSanad = [
   {
-    id: 1000,
+    id: 0,
     front: "Our Family Life - Be Careful Sanad",
-    back: ""
+    back: "Click the number that best indicates how well you know the word, with 4 being the highest"
   },
   {
     id: 1,

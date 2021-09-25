@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import CardItem from './CardItem'
 
-import BasicList from '../../data/list'
+import BasicList from '../../data/basic-list'
 import BeCarefulSanad from '../../data/our-family-life-be-careful-sanad'
 
 const CardList = () => {
@@ -23,12 +23,13 @@ const CardList = () => {
   const selectChange = (event:any) => {
     const value = event.target.value
     setSelectedDeck(Items[value])
+    setCurrentCard(0)
   }
 
   return(
     <div>
       <form>
-      <select value={selectedDeck[0].front} onChange={selectChange}>
+      <select onChange={selectChange}>
         <option value="0">{Items[0][0].front}</option>
         <option value="1">{Items[1][0].front}</option>
       </select> 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 
 const Card = (props:any) => {
   const [flip, setFlip] = useState(false)
@@ -22,6 +22,7 @@ const Card = (props:any) => {
             </header>
           </article>      
         }
+        
         { flip && 
           <article className="card">
             <header className="card-header">
